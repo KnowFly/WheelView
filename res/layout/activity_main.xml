@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="18dp"
+        android:background="#D5D5D5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="开始时间"
+            android:textColor="#363636"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="结束时间"
+            android:textColor="#363636"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#D5D5D5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_wheel_ve"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <com.teemo.wheelview.WheelView
+                android:id="@+id/scene_time_start_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=":" />
+
+            <com.teemo.wheelview.WheelView 
+                android:id="@+id/scene_time_start_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <com.teemo.wheelview.WheelView 
+                android:id="@+id/scene_time_end_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=":" />
+
+            <com.teemo.wheelview.WheelView 
+                android:id="@+id/scene_time_end_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
